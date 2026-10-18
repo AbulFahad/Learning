@@ -5,7 +5,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class FairnessLockExample {
 
-    Lock lock = new ReentrantLock();
+    Lock lock = new ReentrantLock(true);
     public void method1(){
         lock.lock();
         System.out.println("Thread "+ Thread.currentThread().getName() + " has acquired the lock");
